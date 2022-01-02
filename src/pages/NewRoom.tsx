@@ -1,5 +1,5 @@
 import { FormEvent, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { ref, push } from 'firebase/database';
 import { database } from '../services/firebase';
@@ -13,6 +13,8 @@ import logoImg from '../assets/images/logo.svg';
 import '../styles/auth.scss';
 
 export function NewRoom() {
+  const navigate = useNavigate();
+
   const { user } = useAuth();
 
   const [newRoom, setNewRoom] = useState('');
@@ -26,10 +28,12 @@ export function NewRoom() {
 
     const refRoom = ref(database, 'rooms');
 
-    await push(refRoom, {
+    const firebaseRoom = await push(refRoom, {
       title: newRoom,
       authorId: user?.id,
     });
+
+    navigate(`/rooms/${firebaseRoom.key}`);
   }
 
   return (
