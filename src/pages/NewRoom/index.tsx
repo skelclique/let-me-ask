@@ -1,18 +1,20 @@
 import { FormEvent, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { ref, push } from 'firebase/database';
-import { database } from '../services/firebase';
+import { database } from '../../services/firebase';
 
-import { useAuth } from '../hooks/useAuth';
-import { Button } from '../components/Button';
+import { useAuth } from '../../hooks/useAuth';
+import { Button } from '../../components/Button';
 
-import illustrationImg from '../assets/images/illustration.svg';
-import logoImg from '../assets/images/logo.svg';
+import illustrationImg from '../../assets/images/illustration.svg';
+import logoImg from '../../assets/images/logo.svg';
 
-import '../styles/auth.scss';
+import '../../styles/auth.scss';
 
 export function NewRoom() {
+  const navigate = useNavigate();
+
   const { user } = useAuth();
 
   const [newRoom, setNewRoom] = useState('');
@@ -26,10 +28,12 @@ export function NewRoom() {
 
     const refRoom = ref(database, 'rooms');
 
-    await push(refRoom, {
+    const firebaseRoom = await push(refRoom, {
       title: newRoom,
       authorId: user?.id,
     });
+
+    navigate(`/rooms/${firebaseRoom.key}`);
   }
 
   return (
@@ -49,7 +53,7 @@ export function NewRoom() {
           <form onSubmit={handleCreateRoom}>
             <input
               type="text"
-              placeholder="Digite o código da sala"
+              placeholder="Nome da sala"
               onChange={(e) => setNewRoom(e.target.value)}
               value={newRoom}
             />
