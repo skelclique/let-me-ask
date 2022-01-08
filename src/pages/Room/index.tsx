@@ -1,5 +1,5 @@
 import { FormEvent, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 import { push, ref, remove } from 'firebase/database';
 import { database } from '../../services/firebase';
@@ -20,13 +20,16 @@ type RoomParams = {
 };
 
 export function Room() {
-  const { user, signInWithGoogle } = useAuth();
   const [newQuestion, setNewQuestion] = useState('');
-
+  
+  const { user, signInWithGoogle } = useAuth();
+  
   const params = useParams<RoomParams>();
   const roomId = params.id;
 
-  const { questions, title } = useRoom(roomId);
+  const navigate = useNavigate();
+
+  const { title, questions } = useRoom(roomId);
 
   async function handleSendQuestion(event: FormEvent) {
     event.preventDefault();
@@ -58,21 +61,13 @@ export function Room() {
     await signInWithGoogle();
   }
 
-  async function handleLikeQuestion(
-    questionId: string,
-    likeId: string | undefined
-  ) {
+  async function handleLikeQuestion(questionId: string, likeId: string | undefined) {
     if (likeId) {
-      await remove(
-        ref(database, `rooms/${roomId}/questions/${questionId}/likes/${likeId}`)
-      );
+      await remove(ref(database, `rooms/${roomId}/questions/${questionId}/likes/${likeId}`));
     } else {
-      await push(
-        ref(database, `rooms/${roomId}/questions/${questionId}/likes`),
-        {
-          authorId: user?.id,
-        }
-      );
+      await push(ref(database, `rooms/${roomId}/questions/${questionId}/likes`), {
+        authorId: user?.id,
+      });
     }
   }
 
@@ -80,7 +75,11 @@ export function Room() {
     <div id="page-room">
       <header>
         <div className="content">
-          <img src={logoImg} alt="Letmeask" />
+          <img 
+            src={logoImg} 
+            alt="Letmeask" 
+            onClick={() => navigate('/')} 
+          />
           <RoomCode code={roomId ? roomId : ''} />
         </div>
       </header>
@@ -136,9 +135,7 @@ export function Room() {
                     className={`like-button ${question.likeId ? 'liked' : ''}`}
                     type="button"
                     aria-label="Marcar como gostei"
-                    onClick={() =>
-                      handleLikeQuestion(question.id, question.likeId)
-                    }
+                    onClick={() => handleLikeQuestion(question.id, question.likeId)}
                   >
                     {question.likeCount > 0 && (
                       <span>{question.likeCount}</span>
