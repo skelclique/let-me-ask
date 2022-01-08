@@ -1,3 +1,4 @@
+import toast from 'react-hot-toast';
 import { FormEvent, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -13,11 +14,11 @@ import logoImg from '../../assets/images/logo.svg';
 import '../../styles/auth.scss';
 
 export function NewRoom() {
+  const [newRoom, setNewRoom] = useState('');
+
   const navigate = useNavigate();
 
   const { user } = useAuth();
-
-  const [newRoom, setNewRoom] = useState('');
 
   async function handleCreateRoom(event: FormEvent) {
     event.preventDefault();
@@ -26,14 +27,13 @@ export function NewRoom() {
       return;
     }
 
-    const refRoom = ref(database, 'rooms');
-
-    const firebaseRoom = await push(refRoom, {
+    const firebaseRoom = await push(ref(database, 'rooms'), {
       title: newRoom,
       authorId: user?.id,
     });
 
-    navigate(`/rooms/${firebaseRoom.key}`);
+    navigate(`/admin/rooms/${firebaseRoom.key}`);
+    toast.success('Sala criada com sucesso!');
   }
 
   return (
