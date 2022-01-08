@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
 
 import { AuthContextProvider } from './contexts/AuthContext';
 
@@ -10,6 +11,7 @@ import { Room } from './pages/Room';
 function App() {
   return (
     <BrowserRouter>
+      <Toaster />
       <AuthContextProvider>
         <Routes>
           <Route path="/" element={<Home />} />
