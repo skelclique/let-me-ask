@@ -9,13 +9,15 @@
 
   display: flex;
   align-items: center;
-  
+  transition: transform 0.2s;
+
   div {
     background: #835afd;
     padding: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: background 0.4s;
   }
 
   span {
@@ -23,8 +25,17 @@
     align-self: center;
     flex: 1;
     padding: 0 16px 0 12px;
-    width: 240px;
     font-size: 14px;
     font-weight: 500;
+  }
+
+  &:active {
+    transform: scale(1.05);
+  }
+
+  &:hover {
+    div {
+      background: #6F4BD8;
+    }
   }
 }
