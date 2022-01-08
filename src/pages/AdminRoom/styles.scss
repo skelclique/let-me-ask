@@ -12,6 +12,7 @@
 
       > img {
         max-height: 45px;
+        cursor: pointer;
       }
 
       > div {
@@ -52,6 +53,51 @@
 
     .question-list {
       margin-top: 32px;
+
+      button {
+        svg {
+          circle, path {
+            transition: stroke 0.2s;
+          }
+        }
+
+        &:hover {
+          svg {
+            circle, path {
+              stroke: #835afd;
+            }
+          }
+
+        &.deleteQuestion:hover {
+            svg {
+              path {
+                stroke: #e73f5d;
+              }
+            }
+          }
+        }
+      }
+
+      &.empty {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 64px;
+
+        strong {
+          font-size: 18px;
+          font-family: 'Poppins', sans-serif;
+          margin-top: 16px;
+        }
+
+        p {
+          text-align: center;
+          font-size: 14px;
+          color: #737380;
+          margin-top: 6px;
+        }
+      }
     }
   }
 }
