@@ -13,7 +13,7 @@
   cursor: pointer;
   border: 0;
 
-  transition: filter 0.2s;
+  transition: background 0.2s;
 
   img {
     margin-right: 8px;
@@ -23,10 +23,33 @@
     background: #fff;
     border: 1px solid #835afd;
     color: #835afd;
+    transition: background 0.4s;
+
+    &:not(:disabled):hover {
+      color: #fff;
+    }
+  }
+
+  &.canceled {
+    background: #DBDCDD;
+    color: #737380;
+
+    &:not(:disabled):hover {
+      background: #CECECE;
+    }
+  }
+
+  &.closed {
+    background: #E73F5D;
+    color: #fff;
+
+    &:not(:disabled):hover {
+      background: #D73754;
+    }
   }
 
   &:not(:disabled):hover {
-    filter: brightness(0.9);
+    background: #6F4BD8;
   }
 
   &:disabled {
