@@ -1,5 +1,5 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Letmeask" />
+  <img src="./src/assets/images/logo.svg" alt="Letmeask" />
 
   &#xa0;
 </div>
