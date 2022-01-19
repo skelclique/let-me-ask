@@ -14,21 +14,7 @@
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/skelclique/let-me-ask?color=56BEB8">
 
   <img alt="License" src="https://img.shields.io/github/license/skelclique/let-me-ask?color=56BEB8">
-
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/skelclique/let-me-ask?color=56BEB8" /> -->
-
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/skelclique/let-me-ask?color=56BEB8" /> -->
-
-  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/skelclique/let-me-ask?color=56BEB8" /> -->
 </p>
-
-<!-- Status -->
-
-<!-- <h4 align="center"> 
-	🚧  Letmeask 🚀 Under construction...  🚧
-</h4> 
-
-<hr> -->
 
 <p align="center">
   <a href="#dart-about">About</a> &#xa0; | &#xa0; 
@@ -56,10 +42,8 @@ Describe your project
 
 The following tools were used in this project:
 
-- [Expo](https://expo.io/)
 - [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
 
 ## :white_check_mark: Requirements ##
@@ -89,7 +73,7 @@ $ yarn start
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
 
-Made with :heart: by <a href="https://github.com/skelclique" target="_blank">{{YOUR_NAME}}</a>
+Made with :heart: by <a href="https://github.com/skelclique" target="_blank">skelclique</a>
 
 &#xa0;
 
