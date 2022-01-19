@@ -7,19 +7,19 @@
 <h1 align="center">Letmeask</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/skelclique/letmeask?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/skelclique/let-me-ask?color=56BEB8">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/skelclique/letmeask?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/skelclique/let-me-ask?color=56BEB8">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/skelclique/letmeask?color=56BEB8">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/skelclique/let-me-ask?color=56BEB8">
 
-  <img alt="License" src="https://img.shields.io/github/license/skelclique/letmeask?color=56BEB8">
+  <img alt="License" src="https://img.shields.io/github/license/skelclique/let-me-ask?color=56BEB8">
 
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/skelclique/letmeask?color=56BEB8" /> -->
+  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/skelclique/let-me-ask?color=56BEB8" /> -->
 
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/skelclique/letmeask?color=56BEB8" /> -->
+  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/skelclique/let-me-ask?color=56BEB8" /> -->
 
-  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/skelclique/letmeask?color=56BEB8" /> -->
+  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/skelclique/let-me-ask?color=56BEB8" /> -->
 </p>
 
 <!-- Status -->
