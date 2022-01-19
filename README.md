@@ -31,13 +31,14 @@
 ## :dart: About ##
 
 Created for answer a lot of questions 💬 easily,  
-with the tool you can create ✔ a room to answer the questions 💬 of your own viewers and followers 👀
+with the tool you can create a room to answer the questions  
+of your own viewers and followers 👀
 
 ## :sparkles: Features ##
 
 :heavy_check_mark: Google Authentication;\
 :heavy_check_mark: Create questions;\
-:heavy_check_mark: Create a community;
+:heavy_check_mark: Answer the question easily;
 
 ## :rocket: Technologies ##
 
