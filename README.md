@@ -45,6 +45,7 @@ The following tools were used in this project:
 - [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [SCSS](https://sass-lang.com/documentation)
 
 ## :white_check_mark: Requirements ##
 
