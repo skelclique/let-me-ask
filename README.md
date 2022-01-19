@@ -38,7 +38,7 @@ of your own viewers and followers 👀
 
 :heavy_check_mark: Google Authentication;\
 :heavy_check_mark: Create questions;\
-:heavy_check_mark: Answer the question easily;
+:heavy_check_mark: Answer the questions easily;
 
 ## :rocket: Technologies ##
 
@@ -48,6 +48,7 @@ The following tools were used in this project:
 - [React](https://pt-br.reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [SCSS](https://sass-lang.com/documentation)
+- [Firebase](https://firebase.google.com/docs/)
 
 ## :white_check_mark: Requirements ##
 
