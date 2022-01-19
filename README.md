@@ -30,13 +30,13 @@
 
 ## :dart: About ##
 
-Describe your project
+Created for answer a lot of questions easily, with the tool you can create a room to your community
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: Google Authentication;\
+:heavy_check_mark: Create questions;\
+:heavy_check_mark: Create a community;
 
 ## :rocket: Technologies ##
 
