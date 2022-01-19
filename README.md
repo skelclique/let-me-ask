@@ -30,8 +30,8 @@
 
 ## :dart: About ##
 
-Created for answer a lot of questions easily, with the tool  
-you can create a room to answer the questionf of your own community
+Created for answer a lot of questions 💬 easily,  
+with the tool you can create ✔ a room to answer the questions 💬 of your own viewers and followers 👀
 
 ## :sparkles: Features ##
 
