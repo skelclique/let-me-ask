@@ -1,5 +1,5 @@
-<div align="center" id="top"> 
-  <img src="./src/assets/images/logo.svg" alt="Letmeask" />
+<div align="center" id="top">
+  <img src="./src/assets/background.png" alt="Letmeask" />
 
   &#xa0;
 </div>
